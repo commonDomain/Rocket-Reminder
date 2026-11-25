@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>提醒事项</title></head>
+  <body>
+    <main class="panel">
+      <h1>提醒事项</h1>
+      <div class="toolbar">
+        <div class="filters">
+          <button class="filter active" id="pending-filter" type="button">待提醒</button>
+          <button class="filter" id="all-filter" type="button">全部</button>
+        </div>
+        <p class="error" id="error"></p>
+      </div>
+      <table>
+        <thead><tr><th>内容</th><th>时间</th><th>重复</th><th>状态</th><th>操作</th></tr></thead>
+        <tbody id="reminders"></tbody>
+      </table>
+    </main>
+    <button class="add" id="add" type="button" title="新增提醒">+</button>
+    <script type="module" src="/src/list.ts"></script>
+  </body>
+</html>

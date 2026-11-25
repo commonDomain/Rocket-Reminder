@@ -1,0 +1,20 @@
+@import "./base.css";
+body { min-height: 100vh; padding: 18px; }
+.panel { min-height: calc(100vh - 36px); padding: 18px; border: 1px solid #e2e8f0; border-radius: 18px; background: #fff; box-shadow: 0 14px 40px rgb(15 23 42 / 8%); }
+h1 { margin: 0; font-size: 20px; }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 16px; }
+.filters { display: flex; gap: 8px; }
+.filter, .delete, .edit, .stop, .resume { border: 1px solid #cbd5e1; border-radius: 999px; padding: 6px 12px; background: #fff; color: #475569; }
+.filter.active { border-color: #2563eb; background: #eff6ff; color: #1d4ed8; }
+table { width: 100%; margin-top: 14px; border-collapse: collapse; table-layout: fixed; }
+th, td { padding: 11px 8px; border-bottom: 1px solid #edf2f7; text-align: left; font-size: 13px; }
+th { color: #64748b; font-weight: 600; }
+td:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.completed, .missed, .stopped { color: #94a3b8; }
+.delete { padding: 4px 10px; border-color: #fecaca; color: #dc2626; }
+.edit { margin-right: 5px; padding: 4px 10px; border-color: #bfdbfe; color: #1d4ed8; }
+.stop { margin-right: 5px; padding: 4px 10px; border-color: #fed7aa; color: #c2410c; }
+.resume { margin-right: 5px; padding: 4px 10px; border-color: #bbf7d0; color: #15803d; }
+.empty { padding: 36px 0; color: #94a3b8; text-align: center; }
+.add { position: fixed; right: 34px; bottom: 32px; width: 52px; height: 52px; border: 0; border-radius: 50%; background: #2563eb; color: #fff; font-size: 30px; line-height: 1; box-shadow: 0 10px 22px rgb(37 99 235 / 32%); }
+.error { color: #dc2626; font-size: 13px; }

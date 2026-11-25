@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>新增提醒事项</title></head>
+  <body>
+    <form>
+      <h1 id="editor-title">新增提醒事项</h1>
+      <label>提醒时间<input id="time" type="time" required /></label>
+      <label>提醒内容<input id="content" type="text" maxlength="200" required /></label>
+      <div>
+        <label class="repeat-row"><span>重复</span><input id="repeat" type="checkbox" /></label>
+        <div class="repeat-options hidden" id="repeat-options">
+          <label class="choice"><input id="daily" type="checkbox" />每日</label>
+          <label class="choice"><input id="weekly" type="checkbox" />每周</label>
+        </div>
+      </div>
+      <div>
+        <label class="repeat-row"><span>循环</span><input id="loop" type="checkbox" /></label>
+        <div class="loop-options hidden" id="loop-options">
+          <span class="section-label">循环间隔</span>
+          <div class="interval-row">
+            <label><input id="loop-hours" type="number" min="0" max="23" value="0" />小时</label>
+            <label><input id="loop-minutes" type="number" min="0" max="59" value="30" />分钟</label>
+          </div>
+          <div class="time-range">
+            <label>开始时间<input id="loop-start-time" type="time" /></label>
+            <label>结束时间<input id="loop-end-time" type="time" /></label>
+          </div>
+        </div>
+      </div>
+      <p class="error" id="error"></p>
+      <div class="actions">
+        <button class="cancel" id="cancel" type="button">取消</button>
+        <button class="save" type="submit">保存</button>
+      </div>
+    </form>
+    <script type="module" src="/src/add.ts"></script>
+  </body>
+</html>

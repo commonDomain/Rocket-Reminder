@@ -1,0 +1,21 @@
+@import "./base.css";
+html, body { width: 100%; height: 100%; overflow: hidden; background: rgb(0 0 0 / 0%) !important; }
+.train { position: absolute; top: 20%; left: 0; display: none; align-items: center; filter: drop-shadow(0 7px 8px rgb(15 23 42 / 22%)); transform: translate(-100%, -50%); white-space: nowrap; }
+.train.measuring { display: flex; visibility: hidden; }
+.train.playing { display: flex; animation: fly var(--fly-duration, 10s) linear forwards; }
+.banner { position: relative; min-width: max-content; overflow: hidden; border: 3px solid #be123c; border-radius: 10px 0 0 10px; padding: 13px 22px; background: linear-gradient(90deg, #fff7ed, #fde68a, #fff7ed); color: #9f1239; font-size: 23px; font-weight: 700; }
+.banner::after { position: absolute; inset: 0; background: repeating-linear-gradient(-55deg, transparent 0 15px, rgb(255 255 255 / 42%) 15px 28px); content: ""; animation: flow 0.9s linear infinite; pointer-events: none; }
+.connector { width: 29px; height: 4px; background: #9a3412; }
+.rocket { position: relative; width: 150px; height: 76px; }
+.rocket-body { position: absolute; top: 18px; left: 57px; width: 66px; height: 40px; border-radius: 7px 4px 4px 7px; background: linear-gradient(180deg, #fff 0%, #e2e8f0 72%, #94a3b8 100%); box-shadow: inset 0 2px 0 rgb(255 255 255 / 85%); }
+.nose { position: absolute; top: 0; left: 61px; width: 31px; height: 40px; background: linear-gradient(180deg, #ef4444, #b91c1c); clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.rocket-window { position: absolute; top: 10px; left: 34px; width: 18px; height: 18px; border: 3px solid #0369a1; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #bae6fd, #38bdf8 58%, #0284c7); }
+.fin { position: absolute; left: 7px; width: 28px; height: 22px; background: linear-gradient(135deg, #f97316, #c2410c); }
+.fin-top { top: -15px; clip-path: polygon(0 100%, 100% 0, 100% 100%); }
+.fin-bottom { bottom: -15px; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+.nozzle { position: absolute; top: 24px; left: 43px; width: 17px; height: 28px; border-radius: 5px 0 0 5px; background: linear-gradient(180deg, #475569, #0f172a, #475569); }
+.flame { position: absolute; top: 25px; left: 0; width: 48px; height: 26px; background: linear-gradient(90deg, rgb(239 68 68 / 20%), #ef4444 35%, #f97316 70%, #facc15); clip-path: polygon(0 50%, 34% 10%, 100% 0, 88% 50%, 100% 100%, 34% 90%); transform-origin: right center; animation: flame 0.16s ease-in-out infinite alternate; }
+.flame-core { position: absolute; top: 8px; right: 0; width: 29px; height: 10px; border-radius: 60% 0 0 60%; background: linear-gradient(90deg, #facc15, #fef3c7); }
+@keyframes fly { from { transform: translate(-100%, -50%); } to { transform: translate(100vw, -50%); } }
+@keyframes flow { to { transform: translateX(28px); } }
+@keyframes flame { to { transform: scaleX(0.78); } }

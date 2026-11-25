@@ -1,0 +1,7 @@
+.superpowers/
+.worktrees/
+target/
+src-tauri/target/
+src-tauri/gen/schemas/
+dist/
+node_modules/
